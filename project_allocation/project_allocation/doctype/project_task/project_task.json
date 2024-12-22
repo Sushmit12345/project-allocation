@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-21 16:54:37.255977",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "task_id",
+  "task_title",
+  "project_id",
+  "task_start_date",
+  "task_end_date",
+  "status",
+  "assignee"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_id",
+   "fieldtype": "Data",
+   "label": "task id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "task_title",
+   "fieldtype": "Data",
+   "label": "task title"
+  },
+  {
+   "fieldname": "project_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "project id",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "task_start_date",
+   "fieldtype": "Date",
+   "label": "task start date"
+  },
+  {
+   "fieldname": "task_end_date",
+   "fieldtype": "Date",
+   "label": "task end date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "options": "New\nWIP\nunder QA\nCompleted"
+  },
+  {
+   "fieldname": "assignee",
+   "fieldtype": "Select",
+   "label": "assignee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-21 17:39:32.970567",
+ "modified_by": "Administrator",
+ "module": "Project Allocation",
+ "name": "Project task",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "project manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "developers",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "QA",
+   "share": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
